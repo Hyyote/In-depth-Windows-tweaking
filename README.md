@@ -12,19 +12,8 @@ I used to recommend Windows 7 and Windows 10 1803 specifically, but I have to ad
 
 
 
-2. Experimental settings
+2. Windows tweaks
 
-Custom Resolution Utility: delete everything, uncheck everything, add Detailed Resolution -> Exact Reduced with your preferred resolution and refresh rate
-I tried most combinations and still find this to be the best one.
-
-Interrupt affinities: set these to separate cores
--USB XHCI
--Generic PnP Monitor
--GPU and every related PCI-to-PCI bridge to the same core
--Storage controller
-
-
-The next ones aren't really experimental, but more sensible. Running things in the background, even if they are not fully operational takes away performance and possibly makes latency worse.
 
 Disable Task Manager and use Process Explorer in portable mode. SystemInformer (ProcessHacker) causes insane amounts of input lag.
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f >NUL 2>&1
