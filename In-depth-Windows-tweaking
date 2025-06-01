@@ -1,0 +1,81 @@
+This guide is meant to cover things beyond "advanced" PC optimization as I want to share my observations regarding hardware and software. Most known tweaks like basic BIOS and Windows settings are omitted. Most advanced tweaks can be found in my .bat files so I'm not going to explain them either, but leave everyone to test them on their own.
+
+If you need components for games like Valorant or FACEIT and Windows Update support, this guide is not for you.
+
+1. The Operating System
+Linux isn't suitable for competitive gaming because tweaks don't go as deep as the ones you can do in Windows. Distros are similar in latency and input feel, which I found to be subpar compared to Windows.
+I used to recommend Windows 7 and Windows 10 1803 specifically, but I have to admit that later versions are superior only because of perceived stability, higher performance and better software compatibility.
+Windows 11 always used to feel smoother on the desktop but when I ran tests and played games, the two felt identical.
+Windows 10 is more resilient when it comes to tweaks and it can be stripped down to its bones without sacrificing any functionality (16 services running), while Windows 11 needs UWP app support, S... (text truncated for brevity)
+2. Windows Tweaks
+Install a Version of Windows You Like
+
+It can be a stock install or a custom one.
+I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
+Install Windows without Internet Connection
+
+Ensure all update services and automatic driver updates are disabled.
+Disable Audio Enhancements
+
+In the sound control panel.
+Import a Power Plan
+
+My recommendations:
+My own, idle disabled by default
+Bitsum Highest Performance
+Zoyata's power plan
+Use AppxPackagesManager
+
+Clean up apps you don't need.
+Autoruns
+
+Unhide Windows services.
+Services to Disable
+
+AppXSvc, ApxSvc, BITS, Bluetooth related, FontCache, UDK related, WMI, Wpn services.
+Drivers to Disable
+
+AppleSSD, Bluetooth related, HidBatt, HidBth, Intel Serial IO related, Microsoft_Bluetooth, WacomPen.
+BCDEdit Commands
+There are ongoing debates about which is the right configuration for each version of Windows, but in my experience, the legacy settings provided the best results:
+
+Code
+bcdedit /set nx AlwaysOff
+bcdedit /set ems No
+bcdedit /set bootems No
+bcdedit /set integrityservices disable
+bcdedit /set tpmbootentropy ForceDisable
+bcdedit /set bootmenupolicy Legacy
+bcdedit /set debug No
+bcdedit /set disableelamdrivers Yes
+bcdedit /set isolatedcontext No
+bcdedit /set allowedinmemorysettings 0x0
+bcdedit /set vm NO
+bcdedit /set vsmlaunchtype Off
+bcdedit /set configaccesspolicy Default
+bcdedit /set MSI Default
+bcdedit /set usephysicaldestination No
+bcdedit /set usefirmwarepcisettings No
+bcdedit /set sos no
+bcdedit /set pae ForceDisable
+bcdedit /set tscsyncpolicy legacy
+bcdedit /set hypervisorlaunchtype off
+bcdedit /set useplatformclock false
+bcdedit /set useplatformtick no
+bcdedit /set disabledynamictick yes
+bcdedit /set x2apicpolicy disable
+bcdedit /set uselegacyapicmode yes
+Device Manager
+
+View → Devices by type
+In Disk drives, uncheck "write caching" in Properties → Policies
+Disable power saving on every device (use a script or manually)
+Disable unnecessary devices: System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused USB devices, generic PnP monitor
+Show hidden devices, disable Motherboard resources
+Task Manager
+
+Disable Task Manager, use Process Explorer in portable mode.
+SystemInformer (ProcessHacker) causes input lag.
+Command:
+Code
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f
