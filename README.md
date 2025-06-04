@@ -84,11 +84,12 @@ Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, IS
 Show hidden devices, disable Motherboard resources
 
 A properly broken device manager after Windows and SCEWIN BIOS tweaks should look like this:
-![Logo](Images/1.jpg)
 
-![Logo](Images/2.jpg)
+<img src="Images/1.jpg" alt="Logo" width="400" height="500"/>
 
-![Logo](Images/3.jpg)
+<img src="Images/2.jpg" alt="Logo" width="400" height="500"/>
+
+<img src="Images/3.jpg" alt="Logo" width="400" height="500"/>
 
 <br>
 
