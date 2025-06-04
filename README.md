@@ -21,7 +21,7 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
 
 Install Windows without internet connection until you ensure all the update services and automatic driver updates are disabled.
 
-Disable audio enhancements in the sound control panel.<br/>
+Disable audio enhancements in the sound control panel.
 
 Import a power plan of your liking, my recommendations are:
 
@@ -29,7 +29,7 @@ Import a power plan of your liking, my recommendations are:
 
 -Bitsum Highest Performance
 
--Zoyata's power plan (https://github.com/IDIVASM/POWERPLAN-WINDOWS-10-)<br/>
+-Zoyata's power plan (https://github.com/IDIVASM/POWERPLAN-WINDOWS-10-)
 
 Use AppxPackagesManager to clean up apps you don't need.
 
