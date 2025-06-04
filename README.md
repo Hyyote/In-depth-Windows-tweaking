@@ -131,12 +131,14 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Dis
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoControlPanel" /t Reg_DWORD /d "1" /f
 ```
 <br>
+<br>
 
 **Delete ICC Color Profiles**
 
 This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
 colorcpl -> All Profiles -> delete everything under ICC Profiles
 
+<br>
 <br>
 
 **Disable DWM**
@@ -148,4 +150,28 @@ If you are on Windows 11, you cannot restart with DWM disabled, because many thi
 
 You can run the DWM disable script after startup and enable it back again before shutting down.
 If you accidentally restart with DWM disabled you can still open the explorer with Ctrl+E and navigate to your script using the keyboard.
+
+<br>
+<br>
+
+**Display scaling and custom resolutions**
+
+It's generally recommended to use display scaling and native resolutions.
+However Windows complicates things with an additional setting that needs to be changed in order to really use display scaling:
+
+in regedit, go to HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Configuration\<DisplayID>\00\00<br>
+change Scaling to 0
+
+   - 1: Identity scaling
+   - 2: No scaling
+   - 3: Full-screen
+   - 4: Aspect ratio
+
+Even though 2 is the value for no scaling, 0 seems to disable it completely, but this is just speculation.
+
+<br>
+
+As for Custom Resolution Utility, I recommend deleting every value
+
+
 
