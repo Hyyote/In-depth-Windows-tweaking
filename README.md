@@ -22,7 +22,8 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
 Install Windows without internet connection until you ensure all the update services and automatic driver updates are disabled.
 
 Disable audio enhancements in the sound control panel.
-
+<pre>
+<pre>
 Import a power plan of your liking, my recommendations are:
 
 -my own one which has idle disabled by default (https://github.com/Hyyote/files-/blob/main/Hyote.pow)
@@ -30,7 +31,8 @@ Import a power plan of your liking, my recommendations are:
 -Bitsum Highest Performance
 
 -Zoyata's power plan (https://github.com/IDIVASM/POWERPLAN-WINDOWS-10-)
-
+<pre>
+<pre>
 Use AppxPackagesManager to clean up apps you don't need.
 
 Autoruns: unhide Windows services
