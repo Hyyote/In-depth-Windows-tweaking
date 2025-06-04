@@ -103,5 +103,11 @@ check MSI Mode on every device, GPU High, SATA Low, USB High, NIC Normal<br>
 
 ![Logo](Images/4.jpg)
 
+<br>
+
+**Interrupt Affinities**
+
+I played around a lot with this one, and I didn't come to a conclusion. For consistency I recommend not setting affinities, but for a more stable Mouse Polling graph and possibly better mouse feel, I set my USB Host Controller to a separate core.
+
 Disable Task Manager and use Process Explorer in portable mode. SystemInformer (ProcessHacker) causes insane amounts of input lag.
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f 
