@@ -77,5 +77,12 @@ Disable power saving on every device with a script or manually, since it takes a
 Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused usb devices, generic pnp monitor)
 Show hidden devices, disable Motherboard resources
 
+A properly broken device manager after Windows and SCEWIN BIOS tweaks should look like this:
+![Logo](Images/1.jpg)
+
+![Logo](Images/2.jpg)
+
+![Logo](Images/3.jpg)
+
 Disable Task Manager and use Process Explorer in portable mode. SystemInformer (ProcessHacker) causes insane amounts of input lag.
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f 
