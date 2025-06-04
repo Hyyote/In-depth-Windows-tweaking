@@ -8,7 +8,7 @@ https://github.com/Hyyote/files-/tree/main/Windows%2011
 
 ---
 
-## 1. The Operating System
+## 1. The Operating System (ranting, feel free to skip)
 
 Linux isn't suitable for competitive gaming because tweaks don't go as deep as the ones you can do in Windows. Distros are similar in latency and input feel, which I found to be subpar compared to any version of Windows.
 
