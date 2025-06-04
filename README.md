@@ -178,4 +178,8 @@ As for Custom Resolution Utility, I recommend deleting every value and adding re
 
 <br>
 
+**Device Cleanup**
 
+This one is hugely overlooked. There are only benefits to cleaning up unused entries if you don't use multiple devices that rely on Windows settings instead of onboard memory.
+
+You can bulk remove them with: https://www.uwe-sieber.de/files/DeviceCleanup_x64.zip (use at your own risk, since the tool isn't open source)
