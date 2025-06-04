@@ -10,9 +10,11 @@ This guide covers tweaks beyond "advanced" PC optimization, focusing on both har
 
 Linux isn't suitable for competitive gaming because tweaks don't go as deep as the ones you can do in Windows. Distros are similar in latency and input feel, which I found to be subpar compared to any version of Windows.
 
-I used to recommend Windows 7 and Windows 10 1803 specifically, but I have to admit that later versions are superior only because of perceived stability, higher performance and better software compatibility at the moment, but all of them have higher idle latency. I don't find much difference between Windows 10 22H2 and Windows 11 23H2/24H2.
-Windows 11 always used to feel smoother on the desktop but when I ran tests and played games, the two felt identical.
-Windows 10 is more resilient when it comes to tweaks and it can be stripped down to its bones without sacrificing any functionality (25 services running), while Windows 11 needs UWP app support, StateRepository, DWM and many other things running to ensure nothing breaks and can be taken down to around 32 services.
+I used to recommend Windows 7 and Windows 10 1803 specifically, but I have to admit that later versions are superior only because of perceived stability, higher performance and better software compatibility at the moment, but all of them have higher idle latency. I don't find much difference between Windows 10 22H2 and Windows 11 23H2/24H2.<br>
+
+Windows 11 always used to feel smoother on the desktop but when I ran tests and played games, the two felt identical.<br>
+
+Windows 10 is more resilient when it comes to tweaks and it can be stripped down to its bones without sacrificing any functionality (22 services running), while Windows 11 needs UWP app support, StateRepository, DWM and many other things running to ensure nothing breaks and can be taken down to around 31 services.
 
 ---
 
