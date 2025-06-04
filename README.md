@@ -130,3 +130,10 @@ These settings can be turned on and off, but you need to restart for the Control
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoControlPanel" /t Reg_DWORD /d "1" /f
 ```
+<br>
+
+**Delete ICC Color Profiles**
+
+This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
+colorcpl -> All Profiles -> delete everything under ICC Profiles
+
