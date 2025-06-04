@@ -90,5 +90,17 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
 
 ![Logo](Images/3.jpg)
 
+<br>
+
+**MSI Utility V3**
+
+They say this one shouldn't be touched as modern systems have MSI Mode set correctly for every device, however I found some gains in setting them manually.<br>
+This configuration can cause stuttering in some games:<br>
+check MSI Mode on every device, GPU High, SATA Low, USB High, NIC Normal<br>
+
+<br>
+
+![Logo](Images/4.jpg)
+
 Disable Task Manager and use Process Explorer in portable mode. SystemInformer (ProcessHacker) causes insane amounts of input lag.
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f 
