@@ -36,13 +36,17 @@ Disable audio enhancements in the sound control panel.
 
 Use AppxPackagesManager to clean up apps you don't need.
 
-Autoruns: unhide Windows services
+<br>
 
-**services**: disable AppXSvc, ApxSvc, BITS, Bluetooth related, FontCache, UDK related, WMI, Wpn services
+**Autoruns**: unhide Windows services
 
-**drivers**: disable AppleSSD, Bluetooth related, HidBatt, HidBth, Intel Serial IO related, Microsoft_Bluetooth, WacomPen
+   - services: disable AppXSvc, ApxSvc, BITS, Bluetooth related, FontCache, UDK related, WMI, Wpn services
 
-BCDEdits: there are ongoing debates about which is the right configuration for each version of Windows, but in my experience, the legacy settings provided the best results.
+   - drivers: disable AppleSSD, Bluetooth related, HidBatt, HidBth, Intel Serial IO related, Microsoft_Bluetooth, WacomPen
+
+<br>
+
+**BCDEdits**: there are ongoing debates about which is the right configuration for each version of Windows, but in my experience, the legacy settings provided the best results.
    ```batch
 bcdedit /set nx AlwaysOff
 bcdedit /set ems No
