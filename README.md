@@ -137,3 +137,15 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "N
 This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
 colorcpl -> All Profiles -> delete everything under ICC Profiles
 
+<br>
+
+**Disable DWM**
+
+https://github.com/Hyyote/files-/tree/main/DWM
+
+Depending on whether you use Windows 10 or 11 there are two ways to do this.
+If you are on Windows 11, you cannot restart with DWM disabled, because many things like the desktop and mouse will break.
+
+You can run the DWM disable script after startup and enable it back again before shutting down.
+If you accidentally restart with DWM disabled you can still open the explorer with Ctrl+E and navigate to your script using the keyboard.
+
