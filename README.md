@@ -1,8 +1,8 @@
 # In-depth-Windows-tweaking
 
 This guide covers tweaks beyond "advanced" PC optimization focusing on Windows settings that are more on the experimental side. Basic BIOS and Windows settings are widely documented, so they’re not included here. Most advanced tweaks are in my `.bat` files:<br>
-https://github.com/Hyyote/files-/tree/main/Windows%2010<br>
-https://github.com/Hyyote/files-/tree/main/Windows%2011
+&nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/Windows%2010<br>
+&nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/Windows%2011
 
 > **Note:** If you require components for games like Valorant or FACEIT, or need Windows Update support, this guide is not for you.
 
