@@ -10,31 +10,33 @@ https://github.com/Hyyote/files-/tree/main/Windows%2011
 
 ## 1. The Operating System (ranting, feel free to skip)
 
-Linux isn't suitable for competitive gaming because tweaks don't go as deep as the ones you can do in Windows. Distros are similar in latency and input feel, which I found to be subpar compared to any version of Windows.
+   - Linux isn't suitable for competitive gaming because tweaks don't go as deep as the ones you can do in Windows. Distros are similar in latency and input feel, which I found to be subpar compared to any version of Windows.
 
-I used to recommend Windows 7 and Windows 10 1803 specifically, but I have to admit that later versions are superior only because of perceived stability, higher performance and better software compatibility at the moment, but all of them have higher idle latency. I don't find much difference between Windows 10 22H2 and Windows 11 23H2/24H2.<br>
+   - I used to recommend Windows 7 and Windows 10 1803 specifically, but I have to admit that later versions are superior only because of perceived stability, higher performance and better software compatibility at the moment, but all of them have higher idle latency. I don't find much difference between Windows 10 22H2 and Windows 11 23H2/24H2.<br>
 
-Windows 11 always used to feel smoother on the desktop but when I ran tests and played games, the two felt identical.<br>
+   - Windows 11 always used to feel smoother on the desktop but when I ran tests and played games, the two felt identical.<br>
 
-Windows 10 is more resilient when it comes to tweaks and it can be stripped down to its bones without sacrificing any functionality (22 services running), while Windows 11 needs UWP app support, StateRepository, DWM and many other things running to ensure nothing breaks and can be taken down to around 31 services.
+   - Windows 10 is more resilient when it comes to tweaks and it can be stripped down to its bones without sacrificing any functionality (22 services running), while Windows 11 needs UWP app support, StateRepository, DWM and many other things running to ensure nothing breaks and can be taken down to around 31 services.
 
 ---
 
 ## 2. Windows Tweaks
 
-First, install a version of Windows you like, it can be a stock install or a custom one, however I really dislike having a lot of things running in the background in the first place,
+   - First, install a version of Windows you like, it can be a stock install or a custom one, however I really dislike having a lot of things running in the background in the first place,
 so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
 
-Install Windows without internet connection until you ensure all the update services and automatic driver updates are disabled.
+   - Install Windows without internet connection until you ensure all the update services and automatic driver updates are disabled.
 
-Disable audio enhancements in the sound control panel.
+   - Disable audio enhancements in the sound control panel.
 
 **Import a power plan**: (recommendations for Intel)
    - [My custom plan (idle disabled by default)](https://github.com/Hyyote/files-/blob/main/Hyote.pow)
    - Bitsum Highest Performance
    - [Zoyata's power plan](https://github.com/IDIVASM/POWERPLAN-WINDOWS-10-)
+<br>
 
 Use AppxPackagesManager to clean up apps you don't need.
+
 
 <br>
 
@@ -74,13 +76,13 @@ bcdedit /set disabledynamictick yes
 bcdedit /set x2apicpolicy disable
 bcdedit /set uselegacyapicmode yes
 ```
-Device Manager:
+   - Device Manager:
 View -> Devices by type<br>
 In the Disk drives category, uncheck write caching the Properties -> Policies section<br>
 
-Disable power saving on every device with a script or manually, since it takes around one minute to do.
+   - Disable power saving on every device with a script or manually, since it takes around one minute to do.
 
-Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused usb devices, generic pnp monitor)
+   - Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused usb devices, generic pnp monitor)
 Show hidden devices, disable Motherboard resources
 
 A properly broken device manager after Windows and SCEWIN BIOS tweaks should look like this:
@@ -95,8 +97,8 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
 
 **MSI Utility V3**
 
-They say this one shouldn't be touched as modern systems have MSI Mode set correctly for every device, however I found some gains in setting them manually.<br>
-This configuration can cause stuttering in some games:<br>
+   - They say this one shouldn't be touched as modern systems have MSI Mode set correctly for every device, however I found some gains in setting them manually.<br>
+   - This configuration can cause stuttering in some games:<br>
 check MSI Mode on every device, GPU High, SATA Low, USB High, NIC Normal<br>
 
 <br>
@@ -107,7 +109,7 @@ check MSI Mode on every device, GPU High, SATA Low, USB High, NIC Normal<br>
 
 **Interrupt Affinities**
 
-I played around a lot with this one, and I didn't come to a conclusion. For consistency I recommend not setting affinities, but for a more stable Mouse Polling graph and possibly better mouse feel, I set my USB Host Controller to a separate core.
+   - I played around a lot with this one, and I didn't come to a conclusion. For consistency I recommend not setting affinities, but for a more stable Mouse Polling graph and possibly better mouse feel, I set my USB Host Controller to a separate core.
 
 ---
 
@@ -120,11 +122,11 @@ I won't claim these to make a world of a difference or even make directly positi
 
 **Disable Task Manager and Control Panel**
 
-Not having something running in the background is always good. Your system could freeze for many possible reasons while you're playing games or doing something important, but realistically you almost never need to use these.
+   - Not having something running in the background is always good. Your system could freeze for many possible reasons while you're playing games or doing something important, but realistically you almost never need to use these.
 
-I recommend not replacing Task Manager with either ProcessExplorer or SystemInformer (ProcessHacker) because both are sources of input lag. Using them portably is completely fine.
+   - I recommend not replacing Task Manager with either ProcessExplorer or SystemInformer (ProcessHacker) because both are sources of input lag. Using them portably is completely fine.
 
-These settings can be turned on and off, but you need to restart for the Control Panel to turn back on.
+   - These settings can be turned on and off, but you need to restart for the Control Panel to turn back on:
 
 ```cmd
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f
@@ -135,7 +137,7 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "N
 
 **Delete ICC Color Profiles**
 
-This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
+   - This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
 colorcpl -> All Profiles -> delete everything under ICC Profiles
 
 <br>
@@ -145,10 +147,10 @@ colorcpl -> All Profiles -> delete everything under ICC Profiles
 
 https://github.com/Hyyote/files-/tree/main/DWM
 
-Depending on whether you use Windows 10 or 11 there are two ways to do this.
+   - Depending on whether you use Windows 10 or 11 there are two ways to do this.
 If you are on Windows 11, you should not restart your PC with DWM disabled, because many things like the desktop and mouse won't work.
 
-You can run the Disable script after startup and run the Enable one before shutting down the system.
+   - You can run the Disable script after startup and run the Enable one before shutting down the system.
 If you accidentally restart with DWM disabled, the Windows Explorer is still accessible with Ctrl+E, so you can navigate to the Enable script with the keyboard.
 
 <br>
@@ -156,20 +158,20 @@ If you accidentally restart with DWM disabled, the Windows Explorer is still acc
 
 **Regedit mouse tweaks**
 
-The settings found in HKCU\Control Panel\Mouse have been tested extensively,
+   - The settings found in HKCU\Control Panel\Mouse have been tested extensively,
 starting with numerous mouse fixes that modified SmoothMouseX and Y curves without any real benefit to games with proper mouse input.
 
-In short, mouse acccel cannot be disabled with regedit changes for the time being, but I found the best configuration for myself: https://github.com/Hyyote/files-/blob/main/Windows%2010/mouse.reg 
+   - In short, mouse acccel cannot be disabled with regedit changes for the time being, but I found the best configuration for myself: https://github.com/Hyyote/files-/blob/main/Windows%2010/mouse.reg 
 
 <br>
 <br>
 
 **Display scaling and custom resolutions**
 
-It's generally recommended to use display scaling and native resolutions.
+   - It's generally recommended to use display scaling and native resolutions.
 However Windows complicates things with an additional setting that needs to be changed in order to really use display scaling:
 
-in regedit, go to HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Configuration\<DisplayID>\00\00<br>
+   - HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Configuration\<DisplayID>\00\00<br>
 
 change Scaling to 0
 
@@ -182,7 +184,7 @@ Even though 2 is the value for no scaling, 0 seems to disable it completely, but
 
 <br>
 
-As for Custom Resolution Utility, I recommend deleting every value and adding resolutions to the Detailed Resolutions tab, using Exact Reduced timings with the monitor's highest supported refresh rate.
+   - As for Custom Resolution Utility, I recommend deleting every value and adding resolutions to the Detailed Resolutions tab, using Exact Reduced timings with the monitor's highest supported refresh rate.
 
 <img src="Images/5.png" alt="Logo" width="650" height="500"/>
 
@@ -190,10 +192,10 @@ As for Custom Resolution Utility, I recommend deleting every value and adding re
 
 **Device Cleanup**
 
-This one is hugely overlooked. There are only benefits to cleaning up unused entries if you don't use multiple devices that rely on Windows settings instead of onboard memory.
+   - This one is hugely overlooked. There are only benefits to cleaning up unused entries if you don't use multiple devices that rely on Windows settings instead of onboard memory.
 
-Device Manager -> View -> Devices by connection -> Show hidden devices
+   - Device Manager -> View -> Devices by connection -> Show hidden devices
 
-You can bulk remove them with: https://www.uwe-sieber.de/files/DeviceCleanup_x64.zip (use at your own risk, since the tool isn't open source)
+   - You can bulk remove them with: https://www.uwe-sieber.de/files/DeviceCleanup_x64.zip (use at your own risk, since the tool isn't open source)
 
 Hidden devices should be checked on every startup.
