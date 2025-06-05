@@ -1,6 +1,6 @@
 # In-depth-Windows-tweaking
 
-This guide covers tweaks beyond "advanced" PC optimization, focusing on both hardware and software. Most standard tweaks such as basic BIOS and Windows settings are widely documented, so they’re not included here. Most advanced tweaks are in my `.bat` files:<br>
+This guide covers tweaks beyond "advanced" PC optimization focusing on software only. Most standard tweaks such as basic BIOS and Windows settings are widely documented, so they’re not included here. Most advanced tweaks are in my `.bat` files:<br>
 https://github.com/Hyyote/files-/tree/main/Windows%2010<br>
 https://github.com/Hyyote/files-/tree/main/Windows%2011
 
