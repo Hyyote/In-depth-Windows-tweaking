@@ -146,10 +146,10 @@ colorcpl -> All Profiles -> delete everything under ICC Profiles
 https://github.com/Hyyote/files-/tree/main/DWM
 
 Depending on whether you use Windows 10 or 11 there are two ways to do this.
-If you are on Windows 11, you cannot restart with DWM disabled, because many things like the desktop and mouse will break.
+If you are on Windows 11, you should not restart your PC with DWM disabled, because many things like the desktop and mouse won't work.
 
-You can run the DWM disable script after startup and enable it back again before shutting down.
-If you accidentally restart with DWM disabled you can still open the explorer with Ctrl+E and navigate to your script using the keyboard.
+You can run the Disable script after startup and run the Enable one before shutting down the system.
+If you accidentally restart with DWM disabled, the Windows Explorer is still accessible with Ctrl+E, so you can navigate to the Enable script with the keyboard.
 
 <br>
 <br>
