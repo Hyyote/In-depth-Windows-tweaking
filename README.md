@@ -29,7 +29,7 @@ Install Windows without internet connection until you ensure all the update serv
 
 Disable audio enhancements in the sound control panel.
 
-**Import a power plan**:
+**Import a power plan**: (recommendations for Intel)
    - [My custom plan (idle disabled by default)](https://github.com/Hyyote/files-/blob/main/Hyote.pow)
    - Bitsum Highest Performance
    - [Zoyata's power plan](https://github.com/IDIVASM/POWERPLAN-WINDOWS-10-)
@@ -154,6 +154,16 @@ If you accidentally restart with DWM disabled you can still open the explorer wi
 <br>
 <br>
 
+**Regedit mouse tweaks**
+
+The settings found in HKCU\Control Panel\Mouse have been tested extensively,
+starting with numerous mouse fixes that modified SmoothMouseX and Y curves without any real benefit to games with proper mouse input.
+
+In short, mouse acccel cannot be with regedit changes for the time being, but I found the best configuration for myself: https://github.com/Hyyote/files-/blob/main/Windows%2010/mouse.reg 
+
+<br>
+<br>
+
 **Display scaling and custom resolutions**
 
 It's generally recommended to use display scaling and native resolutions.
@@ -182,4 +192,8 @@ As for Custom Resolution Utility, I recommend deleting every value and adding re
 
 This one is hugely overlooked. There are only benefits to cleaning up unused entries if you don't use multiple devices that rely on Windows settings instead of onboard memory.
 
+Device Manager -> View -> Devices by connection -> Show hidden devices
+
 You can bulk remove them with: https://www.uwe-sieber.de/files/DeviceCleanup_x64.zip (use at your own risk, since the tool isn't open source)
+
+Hidden devices should be checked on every startup.
