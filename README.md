@@ -159,7 +159,7 @@ If you accidentally restart with DWM disabled you can still open the explorer wi
 The settings found in HKCU\Control Panel\Mouse have been tested extensively,
 starting with numerous mouse fixes that modified SmoothMouseX and Y curves without any real benefit to games with proper mouse input.
 
-In short, mouse acccel cannot be with regedit changes for the time being, but I found the best configuration for myself: https://github.com/Hyyote/files-/blob/main/Windows%2010/mouse.reg 
+In short, mouse acccel cannot be disabled with regedit changes for the time being, but I found the best configuration for myself: https://github.com/Hyyote/files-/blob/main/Windows%2010/mouse.reg 
 
 <br>
 <br>
