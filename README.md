@@ -1,6 +1,9 @@
 # In-depth-Windows-tweaking
 
 This guide covers tweaks beyond "advanced" PC optimization focusing on Windows settings that are more on the experimental side. Basic BIOS and Windows settings are widely documented, so they’re not included here. Most advanced tweaks are in my `.bat` files:<br>
+
+you can search for things you are interested in, like MouseDataQueueSize, CoreParking, Kernel settings and random ones in Miscellaneous
+
 &nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/Windows%2010<br>
 &nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/Windows%2011
 
