@@ -116,7 +116,7 @@ check MSI Mode on every device, GPU High, SATA Low, USB High, NIC Normal<br>
    - Use either https://github.com/valleyofdoom/AutoGpuAffinity, or use a game benchmark to see which core your GPU should be bound to.<br>
  In Device Manager, PCI to PCI Bridge devices above your GPU entry also have to be bound to the same core.<br> Check their locations individually by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
    - You can set affinities for just about anything but most configurations are plain worse than the default one but you can check if individual cores could play better with your devices like USB and SSD.
-   - For the USB Host Controller, avoid the first two cores because the OS already uses them extensively, so usually core 3 or 4 would yield the best results.
+   - For the USB Host Controller, avoid the first two cores because the OS already uses them extensively, so usually core 3 or 4 yield the best results.
 ---
 
 ## 2.5. Poorly documented tweaks
