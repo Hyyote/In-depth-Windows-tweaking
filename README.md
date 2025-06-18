@@ -170,18 +170,16 @@ However Windows complicates things with an additional setting that needs to be c
 
    - HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Configuration\<DisplayID>\00\00<br>
 
-change Scaling to 0
+change Scaling to 2
 
    - 1: Identity scaling
    - 2: No scaling
    - 3: Full-screen
    - 4: Aspect ratio
 
-Even though 2 is the value for no scaling, 0 seems to disable it completely, but this is just speculation.
-
 <br>
 
-   - As for Custom Resolution Utility, I recommend deleting every value and adding resolutions to the Detailed Resolutions tab, using Exact Reduced timings with the monitor's highest supported refresh rate.
+As for Custom Resolution Utility, I recommend deleting every value and adding resolutions to the Detailed Resolutions tab, using Exact Reduced timings with the monitor's highest supported refresh rate.
 
 <img src="Images/5.png" alt="Logo" width="650" height="500"/>
 
