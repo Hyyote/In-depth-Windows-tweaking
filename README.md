@@ -98,25 +98,13 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
 
 <br>
 
-**MSI Utility V3**
-
-   - They say this one shouldn't be touched as modern systems have MSI Mode set correctly for every device, however I found some gains in setting them manually.<br>
-   - This configuration can cause stuttering in some games:<br>
-check MSI Mode on every device, GPU High, SATA Low, USB High, NIC Normal<br>
-
-<br>
-
-![Logo](Images/4.jpg)
-
-<br>
-
 **Interrupt Affinities**
 
    - These days it's generally recommended to let affinities be handled by the OS, especially for CPUs that have less than 10 cores, but I'll share my optimal configuration.
-   - Use either https://github.com/valleyofdoom/AutoGpuAffinity, or use a game benchmark to see which core your GPU should be bound to.<br>
+   - Use either https://github.com/valleyofdoom/AutoGpuAffinity, or a game benchmark to see which core your GPU should be bound to.<br>
  In Device Manager, PCI to PCI Bridge devices above your GPU entry also have to be bound to the same core.<br> Check their locations individually by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
-   - You can set affinities for just about anything but most configurations are plain worse than the default one but you can check if individual cores could play better with your devices like USB and SSD.
-   - For the USB Host Controller, avoid the first two cores because the OS already uses them extensively, so usually core 3 or 4 yield the best results.
+   - The devices worth assigning to separate cores are: USB host controller, GPU, network card.
+   - If you are using Receive Side Scaling, your network card should be set to IrqPolicySpreadMessageAcrossAllProcessors
 ---
 
 ## 2.5. Poorly documented tweaks
