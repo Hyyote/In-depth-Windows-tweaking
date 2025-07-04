@@ -33,9 +33,9 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
    - Disable audio enhancements in the sound control panel.
 
 **Import a power plan**: (recommendations for Intel)
-   - [My custom plan (idle disabled by default)](https://github.com/Hyyote/files-/blob/main/Hyote.pow)
-   - Bitsum Highest Performance
-   - [Zoyata's power plan](https://github.com/IDIVASM/POWERPLAN-WINDOWS-10-)
+   - [My custom plan (idle disabled by default)](https://github.com/Hyyote/files-/blob/main/Power%20plans/Hyote.pow)
+   - [Lawliet](https://github.com/Hyyote/files-/blob/main/Power%20plans/lawliet.pow)
+   - [Sapphire](https://github.com/Hyyote/files-/blob/main/Power%20plans/sapphire.pow)
 <br>
 
 Use AppxPackagesManager to clean up apps you don't need.
