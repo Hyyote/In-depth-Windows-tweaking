@@ -158,8 +158,7 @@ However Windows complicates things with an additional setting that needs to be c
 
    - HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Configuration\<DisplayID>\00\00<br>
 
-change Scaling to 0<br>
-This value isn't documented, but setting it to 0 gives me sharper mouse movement and it feels like scaling is disabled entirely this way.
+change Scaling to 2<br>
 
    - 1: Identity scaling
    - 2: No scaling
