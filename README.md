@@ -134,6 +134,8 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "N
    - This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
 colorcpl -> All Profiles -> delete everything under ICC Profiles
 
+Use limited RGB mode with the lowest visibly acceptable color depth in your GPU's software.
+
 <br>
 <br>
 
