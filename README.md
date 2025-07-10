@@ -142,15 +142,11 @@ Use limited RGB mode with the lowest visibly acceptable color depth in your GPU'
 <br>
 <br>
 
-**Disable DWM**
+**DWM**
 
-https://github.com/Hyyote/files-/tree/main/DWM
+https://github.com/LuSlower/dwm-basic
 
-   - Depending on whether you use Windows 10 or 11 there are two ways to do this.
-If you are on Windows 11, you should not restart your PC with DWM disabled, because many things like the desktop and mouse won't work.
-
-   - You can run the Disable script after startup and run the Enable one before shutting down the system.
-If you accidentally restart with DWM disabled, the Windows Explorer is still accessible with Ctrl+E, so you can navigate to the Enable script with the keyboard.
+   - Disabling DWM has way too many unintended effects, but this program makes it possible to use the most minimal version of DWM without breaking anything.
 
 <br>
 <br>
