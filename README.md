@@ -105,7 +105,9 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
 
    - Use benchmarks to determine which cores get you the highest performance and set your GPU to two cores.<br>
  In Device Manager, PCI to PCI Bridge devices above your GPU entry also have to be bound to the same cores.<br> Check their locations individually by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
+
    - The devices worth assigning to separate cores are: USB host controller, GPU, network card.
+
    - If you are using Receive Side Scaling, your network card should be set to IrqPolicySpreadMessageAcrossAllProcessors
 ---
 
@@ -182,3 +184,11 @@ As for Custom Resolution Utility, I recommend deleting every value and adding re
    - You can bulk remove them with: https://www.uwe-sieber.de/files/DeviceCleanup_x64.zip (use at your own risk, since the tool isn't open source)
 
 Hidden devices should be checked on every startup.
+
+**Process Priority**
+
+   - Changing process priorities is generally not recommended and usually results in worse performance and hitreg in games.
+
+   - I recommend unchecking Boost for individual processes using Process Lasso or other programs.
+
+   - Unchecking Critical on smss, wininit, winlogon is also worth experimenting with.
