@@ -103,9 +103,8 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
 
 **Interrupt Affinities**
 
-   - These days it's generally recommended to let affinities be handled by the OS, especially for CPUs that have less than 10 cores, but I'll share my optimal configuration.
-   - Use either https://github.com/valleyofdoom/AutoGpuAffinity, or a game benchmark to see which core your GPU should be bound to.<br>
- In Device Manager, PCI to PCI Bridge devices above your GPU entry also have to be bound to the same core.<br> Check their locations individually by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
+   - Use benchmarks to determine which cores get you the highest performance and set your GPU to two cores.<br>
+ In Device Manager, PCI to PCI Bridge devices above your GPU entry also have to be bound to the same cores.<br> Check their locations individually by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
    - The devices worth assigning to separate cores are: USB host controller, GPU, network card.
    - If you are using Receive Side Scaling, your network card should be set to IrqPolicySpreadMessageAcrossAllProcessors
 ---
