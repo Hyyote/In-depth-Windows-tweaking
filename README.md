@@ -103,8 +103,8 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
 
 **Interrupt Affinities**
 
-   - Use benchmarks to determine which cores get you the highest performance and set your GPU to two cores.<br>
- In Device Manager, PCI to PCI Bridge devices above your GPU entry also have to be bound to the same cores.<br> Check their locations individually by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
+   - Use benchmarks to determine which core gets you the highest performance.<br>
+ In Device Manager, PCI to PCI Bridge devices above your GPU entry also have to be bound to the same core.<br> Check their locations individually by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
 
    - The devices worth assigning to separate cores are: USB host controller, GPU, network card.
 
