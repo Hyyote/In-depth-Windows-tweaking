@@ -84,7 +84,7 @@ bcdedit /set uselegacyapicmode yes
 ```
    - Device Manager:
 View -> Devices by type<br>
-In the Disk drives category, uncheck write caching the Properties -> Policies section<br>
+In the Disk drives category, turn off write-cache buffer flushing in  Properties -> Policies<br>
 
    - Disable power saving on every device with a script or manually, since it takes around one minute to do.
 
