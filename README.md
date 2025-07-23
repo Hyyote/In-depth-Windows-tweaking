@@ -84,9 +84,10 @@ bcdedit /set uselegacyapicmode yes
 ```
    - Device Manager:
 View -> Devices by type<br>
-In the Disk drives category, turn off write-cache buffer flushing in  Properties -> Policies<br>
+For your storage device under Disk drives, turn off write caching by going into Properties -> Policies<br>
 
    - Disable power saving on every device with a script or manually, since it takes around one minute to do.
+     (https://github.com/Hyyote/files-/tree/main/Disable%20power%20saving)
 
    - Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused usb devices, generic pnp monitor)
 Show hidden devices, disable Motherboard resources
