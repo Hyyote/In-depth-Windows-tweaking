@@ -150,6 +150,8 @@ https://github.com/LuSlower/dwm-basic
 
    - Disabling DWM has way too many unintended effects, but this program makes it possible to use the most minimal version of DWM without breaking anything.
 
+   - For a more aggressive solution, my script can be used which only works up to Windows 10: https://github.com/Hyyote/files-/tree/main/DWM
+
 <br>
 <br>
 
