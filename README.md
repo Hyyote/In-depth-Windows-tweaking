@@ -117,7 +117,7 @@ storage (questionable)
 
    - Use benchmarks to determine which core gets you the highest performance for the GPU.<br>
    
- In Device Manager, the PCI to PCI Bridge directly above your GPU entry also has to be bound to the same core.<br> Check its by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
+   - In Device Manager, the PCI to PCI Bridge directly above your GPU entry also has to be bound to the same core.<br> Check its location by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
 
    - If you are using Receive Side Scaling, your network card should be set to IrqPolicySpreadMessageAcrossAllProcessors
 ---
