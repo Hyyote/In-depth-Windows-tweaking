@@ -56,31 +56,34 @@ Use AppxPackagesManager to clean up apps you don't need.
 
 **BCDEdits**: there are ongoing debates about which is the right configuration for each version of Windows, but in my experience, the legacy settings provided the best results.
    ```batch
-bcdedit /set nx AlwaysOff
-bcdedit /set ems No
-bcdedit /set bootems No
-bcdedit /set integrityservices disable
-bcdedit /set tpmbootentropy ForceDisable
-bcdedit /set bootmenupolicy Legacy
-bcdedit /set debug No
-bcdedit /set disableelamdrivers Yes
-bcdedit /set isolatedcontext No
-bcdedit /set allowedinmemorysettings 0x0
-bcdedit /set vm NO
-bcdedit /set vsmlaunchtype Off
-bcdedit /set configaccesspolicy Default
-bcdedit /set MSI Default
-bcdedit /set usephysicaldestination No
-bcdedit /set usefirmwarepcisettings No
-bcdedit /set sos no
-bcdedit /set pae ForceDisable
-bcdedit /set tscsyncpolicy legacy
-bcdedit /set hypervisorlaunchtype off
-bcdedit /set useplatformclock false
-bcdedit /set useplatformtick no
-bcdedit /set disabledynamictick yes
-bcdedit /set x2apicpolicy disable
-bcdedit /set uselegacyapicmode yes
+BCDEDIT /set nx AlwaysOff >NUL 2>&1
+BCDEDIT /set ems No >NUL 2>&1
+BCDEDIT /set bootems No >NUL 2>&1
+BCDEDIT /set integrityservices disable >NUL 2>&1
+BCDEDIT /set tpmbootentropy ForceDisable >NUL 2>&1
+BCDEDIT /set bootmenupolicy Legacy >NUL 2>&1
+BCDEDIT /set debug No >NUL 2>&1
+BCDEDIT /set hypervisorlaunchtype Off >NUL 2>&1
+BCDEDIT /set disableelamdrivers Yes >NUL 2>&1
+BCDEDIT /set isolatedcontext No >NUL 2>&1
+BCDEDIT /set allowedinmemorysettings 0x0 >NUL 2>&1
+BCDEDIT /set vm No >NUL 2>&1
+BCDEDIT /set vsmlaunchtype Off >NUL 2>&1
+BCDEDIT /set x2apicpolicy Disable >NUL 2>&1
+BCDEDIT /set configaccesspolicy Default >NUL 2>&1
+BCDEDIT /set MSI Default >NUL 2>&1
+BCDEDIT /set usephysicaldestination No >NUL 2>&1
+BCDEDIT /set usefirmwarepcisettings No >NUL 2>&1
+BCDEDIT /set tscsyncpolicy Legacy >NUL 2>&1
+BCDEDIT /deletevalue useplatformclock >NUL 2>&1
+BCDEDIT /set disabledynamictick yes >NUL 2>&1
+BCDEDIT /set useplatformtick No >NUL 2>&1
+BCDEDIT /set useplatformclock False >NUL 2>&1
+BCDEDIT /set uselegacyapicmode Yes >NUL 2>&1
+BCDEDIT /set sos no >NUL 2>&1
+BCDEDIT /set pae ForceDisable >NUL 2>&1
+BCDEDIT /set maxproc No >NUL 2>&1
+BCDEDIT /set restrictapicluster 0 >NUL 2>&1
 ```
    - Device Manager:
 View -> Devices by type<br>
