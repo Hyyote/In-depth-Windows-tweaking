@@ -148,7 +148,10 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "N
 
    - This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
 colorcpl -> All Profiles -> delete everything until the page is blank
-   - Advanced -> Default rendering intent: Business Graphics
+   - Deselect the Rendering Intent setting by adding:<br>
+```cmd
+REG ADD "HKCU\Software\Microsoft\Windows NT\CurrentVersion\ICM\RegisteredProfiles" /v "ri" /t REG_DWORD /d "4" /f
+```
 
 Use the YcbCr 4:2:2 color format in your GPU settings if your eyes are fine with the quality loss.
 
