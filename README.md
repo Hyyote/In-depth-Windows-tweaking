@@ -147,7 +147,8 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "N
 **Delete ICC Color Profiles**
 
    - This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
-colorcpl -> All Profiles -> delete everything under ICC Profiles
+colorcpl -> All Profiles -> delete everything until the page is blank
+   - Advanced -> Default rendering intent: Business Graphics
 
 Use the YcbCr 4:2:2 color format in your GPU settings if your eyes are fine with the quality loss.
 
