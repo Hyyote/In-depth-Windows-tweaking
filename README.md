@@ -36,7 +36,7 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
 **Import a power plan**<br>
 
 Recommendations:
-   - [My custom plan](https://github.com/Hyyote/files-/blob/main/Power%20plans/Hyote.pow)
+   - [BEYOND TWEAKING](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyond.pow)
    - [Lawliet](https://github.com/Hyyote/files-/blob/main/Power%20plans/lawliet.pow)
    - [Sapphire](https://github.com/Hyyote/files-/blob/main/Power%20plans/sapphire.pow)
 <br>
