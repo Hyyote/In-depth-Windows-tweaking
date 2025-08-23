@@ -205,7 +205,4 @@ Hidden devices should be checked on every startup.
 **Process Priority**
 
    - Changing process priorities is generally not recommended and usually results in worse performance and hitreg in games.
-
-   - I recommend unchecking Boost for individual processes using Process Lasso or other programs.
-
-   - Unchecking Critical on smss, wininit, winlogon is also worth experimenting with.
+   - One of the two csrss.exe instances show DPC delta in the Threads tab. Setting the threads with the highest delta to Time Critical priority can make inputs more responsive. It can be checked by moving the mouse and clicking on the threads that come out on top.
