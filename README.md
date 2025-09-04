@@ -2,10 +2,9 @@
 
 This guide covers tweaks beyond "advanced" PC optimization focusing on Windows settings that are more on the experimental side. Basic BIOS and Windows settings are widely documented, so they’re not included here. Most advanced tweaks are in my `.bat` files:<br>
 
-you can search for things you are interested in, like MouseDataQueueSize, CoreParking, Kernel settings and random ones in Miscellaneous
+you can search for things you are interested in by searching for keywords like Privacy, Telemetry, CoreParking, Kernel settings, while undefined ones are in Miscellaneous
 
-&nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/Windows%2010<br>
-&nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/Windows%2011
+&nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/tweaks
 
 > **Note:** If you require components for games like Valorant or FACEIT, or need Windows Update support, this guide is not for you.
 
@@ -36,7 +35,7 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
 **Import a power plan**<br>
 
 Recommendations:
-   - [BEYOND TWEAKING](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyond.pow)
+   - [BEYOND PERFORMANCE](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyond.pow)
    - [Lawliet](https://github.com/Hyyote/files-/blob/main/Power%20plans/lawliet.pow)
    - [Sapphire](https://github.com/Hyyote/files-/blob/main/Power%20plans/sapphire.pow)
 <br>
@@ -54,7 +53,7 @@ Use AppxPackagesManager to clean up apps you don't need.
 
 <br>
 
-**BCDEdits**: there are ongoing debates about which is the right configuration for each version of Windows, but in my experience, the legacy settings provided the best results.
+**BCDEdits**: (default values recommended for Windows 11) there are ongoing debates about which is the right configuration for each version of Windows, but in my experience, the legacy settings provided the best results.
    ```batch
 BCDEDIT /set nx AlwaysOff >NUL 2>&1
 BCDEDIT /set ems No >NUL 2>&1
@@ -112,7 +111,6 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
 USB host controller<br>
 GPU<br>
 network card<br>
-storage (questionable)
 <br>
 
    - Use benchmarks to determine which core gets you the highest performance for the GPU.<br>
@@ -120,12 +118,12 @@ storage (questionable)
    - In Device Manager, the PCI to PCI Bridge directly above your GPU entry also has to be bound to the same core.<br> Check its location by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
 
    - If you are using Receive Side Scaling, your network card should be set to IrqPolicySpreadMessageAcrossAllProcessors
+
+   - Affinities don't do anything for storage controllers
 ---
 
 ## 2.5. Poorly documented tweaks
 
-
-I won't claim these to make a world of a difference or even make directly positive changes to your system, but I find them very important.
 
 <br>
 
@@ -164,7 +162,7 @@ https://github.com/LuSlower/dwm-basic
 
    - Disabling DWM has way too many unintended effects, but this program makes it possible to use the most minimal version of DWM without breaking anything.
 
-   - For a more aggressive solution, my script can be used which only works up to Windows 10: https://github.com/Hyyote/files-/tree/main/DWM
+   - For a more aggressive solution, this script can be used to semi-disable DWM before running games and then turn it back on before shutting down the PC to avoid breaking mouse input: https://github.com/Hyyote/files-/tree/main/DWM
 
 <br>
 <br>
@@ -187,6 +185,7 @@ change Scaling to 2<br>
 <br>
 
 As for Custom Resolution Utility, I recommend deleting every value and adding resolutions to the Detailed Resolutions tab, using Exact Reduced timings with the monitor's highest supported refresh rate.
+It's worth trying to lower the Vertical Total setting in the Manual tab before running restart64.exe.
 
 <img src="Images/5.png" alt="Logo" width="650" height="500"/>
 
