@@ -207,7 +207,8 @@ Hidden devices should be checked on every startup.
    - DWM: Threads tab -> Suspend Windows.Gaming.Input thread ; CMit, CKst Idle Priority
    - audiodg: set affinity to one core, Threads -> audiodg.exe Idle Priority
 
-**Remove clock interrupts from all cores except core 0**
+**Remove clock interrupts from all cores except core 0**<br>
+&nbsp;https://github.com/Hyyote/files-/tree/main/tools/livekd
    - Done by setting KeQuantumEndTimerIncrement to ffffffff
    - Move tools\livekd with all the files to C:
    - Run apply-qeti.cmd as Admin on every startup
