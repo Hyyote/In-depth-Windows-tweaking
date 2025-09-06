@@ -208,7 +208,13 @@ Hidden devices should be checked on every startup.
    - audiodg: set affinity to one core, Threads -> audiodg.exe Idle Priority
 
 **Remove clock interrupts from all cores except core 0**<br>
-&nbsp;https://github.com/Hyyote/files-/tree/main/tools/livekd
+https://github.com/Hyyote/files-/tree/main/tools/livekd
    - Done by setting KeQuantumEndTimerIncrement to ffffffff
    - Move tools\livekd with all the files to C:
    - Run apply-qeti.cmd as Admin on every startup
+
+<br>
+credits:<br>
+https://github.com/eskezje lots of undocumented registry values
+
+https://twitter.com/BEYONDPERF_LLG process priority settings and removing clock interrupts
