@@ -25,11 +25,11 @@ you can search for things you are interested in by searching for keywords like P
 ## 2. Windows Tweaks
 
    - First, install a version of Windows you like, it can be a stock install or a custom one, however I really dislike having a lot of things running in the background in the first place,
-so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11.
+so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11
 
-   - Install Windows without internet connection until you ensure all the update services and automatic driver updates are disabled.
+   - Install Windows without internet connection until you ensure all the update services and automatic driver updates are disabled
 
-   - Disable audio enhancements in the sound control panel.
+   - Disable audio enhancements in the sound control panel
 <br>
 
 **Import a power plan**<br>
@@ -88,7 +88,7 @@ BCDEDIT /set restrictapicluster 0 >NUL 2>&1
 View -> Devices by type<br>
 For your storage device under Disk drives, turn off write caching by going into Properties -> Policies<br>
 
-   - Disable power saving on every device with a script or manually, since it takes around one minute to do.
+   - Disable power saving on every device with a script or manually, since it takes around one minute to do
      (https://github.com/Hyyote/files-/tree/main/Disable%20power%20saving)
 
    - Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused usb devices, generic pnp monitor)
@@ -160,7 +160,7 @@ Use the YcbCr 4:2:2 color format in your GPU settings if your eyes are fine with
 
 https://github.com/LuSlower/dwm-basic
 
-   - Disabling DWM has way too many unintended effects, but this program makes it possible to use the most minimal version of DWM without breaking anything.
+   - Disabling DWM has way too many unintended effects, but this program makes it possible to use the most minimal version of DWM without breaking anything
 
    - For a more aggressive solution, this script can be used to semi-disable DWM before running games and then turn it back on before shutting down the PC to avoid breaking mouse input: https://github.com/Hyyote/files-/tree/main/DWM
 
@@ -206,3 +206,8 @@ Hidden devices should be checked on every startup.
    - One of the two csrss.exe instances show DPC delta in the Threads tab. Setting the threads with the highest delta to Time Critical Priority can make inputs more responsive. It can be checked by moving the mouse and clicking on the threads that come out on top.
    - DWM: Threads tab -> Suspend Windows.Gaming.Input thread ; CMit, CKst Idle Priority
    - audiodg: set affinity to one core, Threads -> audiodg.exe Idle Priority
+
+**Remove clock interrupts from all cores except core 0**
+   - Done by setting KeQuantumEndTimerIncrement to ffffffff
+   - Move tools\livekd with all the files to C:
+   - Run apply-qeti.cmd as Admin on every startup
