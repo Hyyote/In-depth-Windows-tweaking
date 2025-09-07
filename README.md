@@ -68,20 +68,21 @@ BCDEDIT /set isolatedcontext No >NUL 2>&1
 BCDEDIT /set allowedinmemorysettings 0x0 >NUL 2>&1
 BCDEDIT /set vm No >NUL 2>&1
 BCDEDIT /set vsmlaunchtype Off >NUL 2>&1
-BCDEDIT /set x2apicpolicy Disable >NUL 2>&1
+BCDEDIT /set x2apicpolicy Enable >NUL 2>&1
 BCDEDIT /set configaccesspolicy Default >NUL 2>&1
 BCDEDIT /set MSI Default >NUL 2>&1
 BCDEDIT /set usephysicaldestination No >NUL 2>&1
 BCDEDIT /set usefirmwarepcisettings No >NUL 2>&1
-BCDEDIT /set tscsyncpolicy Legacy >NUL 2>&1
+BCDEDIT /set tscsyncpolicy Enhanced >NUL 2>&1
+BCDEDIT /set disabledynamictick Yes >NUL 2>&1
+BCDEDIT /set useplatformtick Yes >NUL 2>&1
 BCDEDIT /deletevalue useplatformclock >NUL 2>&1
-BCDEDIT /set disabledynamictick yes >NUL 2>&1
-BCDEDIT /set useplatformtick No >NUL 2>&1
 BCDEDIT /set useplatformclock False >NUL 2>&1
-BCDEDIT /set uselegacyapicmode Yes >NUL 2>&1
-BCDEDIT /set sos no >NUL 2>&1
+BCDEDIT /set uselegacyapicmode No >NUL 2>&1
+BCDEDIT /set sos No >NUL 2>&1
 BCDEDIT /set pae ForceDisable >NUL 2>&1
 BCDEDIT /set maxproc No >NUL 2>&1
+BCDEDIT /set xsavedisable Yes >NUL 2>&1
 BCDEDIT /set restrictapicluster 0 >NUL 2>&1
 ```
    - Device Manager:
