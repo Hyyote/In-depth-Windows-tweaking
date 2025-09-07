@@ -53,7 +53,7 @@ Use AppxPackagesManager to clean up apps you don't need.
 
 <br>
 
-**BCDEdits**: (default values recommended for Windows 11) there are ongoing debates about which is the right configuration for each version of Windows, but in my experience, the legacy settings provided the best results.
+**BCDEdits**: (default values recommended for Windows 11) there are ongoing debates about which is the right configuration for each version of Windows, but I got the best results with these commands with HPET disabled in BIOS and Windows.
    ```batch
 BCDEDIT /set nx AlwaysOff >NUL 2>&1
 BCDEDIT /set ems No >NUL 2>&1
