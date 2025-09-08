@@ -211,15 +211,8 @@ Hidden devices should be checked on every startup.
    - One of the two csrss.exe instances show DPC delta in the Threads tab. Setting the threads with the highest delta to Time Critical Priority can make inputs more responsive. It can be checked by moving the mouse and clicking on the threads that come out on top.
    - DWM: Threads tab -> Suspend Windows.Gaming.Input thread ; CMit, CKst Idle Priority
    - audiodg: set affinity to one core, Threads -> audiodg.exe Idle Priority
-
-**Remove clock interrupts from all cores except core 0**<br>
-https://github.com/Hyyote/files-/tree/main/tools/livekd
-   - Done by setting KeQuantumEndTimerIncrement to ffffffff
-   - Move tools\livekd with all the files to C:
-   - Run apply-qeti.cmd as Admin on every startup
-
-<br>
 credits:<br>
+
 https://github.com/eskezje lots of undocumented registry values
 
 https://twitter.com/BEYONDPERF_LLG process priority settings and removing clock interrupts
