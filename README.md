@@ -210,8 +210,9 @@ Hidden devices should be checked on every startup.
 
    - One of the two csrss.exe instances show DPC delta in the Threads tab. Setting the threads with the highest delta to Time Critical Priority can make inputs more responsive. It can be checked by moving the mouse and clicking on the threads that come out on top.
    - DWM: Threads tab -> Suspend Windows.Gaming.Input thread ; CMit, CKst Idle Priority
-   - audiodg: set affinity to one core, Threads -> audiodg.exe Idle Priority
-credits:<br>
+   - audiodg: set affinity to one core, Threads -> audiodg.exe Idle Priority<br>
+
+credits:
 
 https://github.com/eskezje lots of undocumented registry values
 
