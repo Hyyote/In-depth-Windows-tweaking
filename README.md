@@ -115,14 +115,11 @@ A properly broken device manager after Windows and SCEWIN BIOS tweaks should loo
    
 USB host controller<br>
 GPU<br>
-network card<br>
 <br>
 
    - Use benchmarks to determine which core gets you the highest performance for the GPU.<br>
    
    - In Device Manager, the PCI to PCI Bridge directly above your GPU entry also has to be bound to the same core.<br> Check its location by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
-
-   - If you are using Receive Side Scaling, your network card should be set to IrqPolicySpreadMessageAcrossAllProcessors
 
    - Affinities don't do anything for storage controllers
 ---
@@ -159,24 +156,11 @@ REG ADD "HKCU\Software\Microsoft\Windows NT\CurrentVersion\ICM\RegisteredProfile
 Use the YcbCr 4:2:2 color format in your GPU settings if your eyes are fine with the quality loss.
 
 <br>
-<br>
-
-**DWM**
-
-https://github.com/LuSlower/dwm-basic
-
-   - Disabling DWM has way too many unintended effects, but this program makes it possible to use the most minimal version of DWM without breaking anything
-
-   - For a more aggressive solution, this script can be used to semi-disable DWM before running games and then turn it back on before shutting down the PC to avoid breaking mouse input: https://github.com/Hyyote/files-/tree/main/DWM
-
-<br>
-<br>
-
 
 **Display scaling and custom resolutions**
 
-   - It's generally recommended to use display scaling and native resolutions.
-However Windows complicates things with an additional setting that needs to be changed in order to really use display scaling:
+   - It's generally recommended to use display scaling and native resolutions. This can only be achieved by creating custom resolutions in Custom Resolution Utility. Confirm display scaling being used by checking the active resolution in the monitor's menu.
+   - Windows has settings for scaling but by creating a custom resolution, the result will always be display scaled, however it's ideal to set it anyway.
 
    - HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Configuration\<DisplayID>\00\00<br>
 
@@ -208,9 +192,10 @@ Hidden devices should be checked on every startup.
 
 **Process Priority**
 
-   - One of the two csrss.exe instances show DPC delta in the Threads tab. Setting the threads with the highest delta to Time Critical Priority can make inputs more responsive. It can be checked by moving the mouse and clicking on the threads that come out on top.
-   - DWM: Threads tab -> Suspend Windows.Gaming.Input thread ; CMit, CKst Idle Priority
-   - audiodg: set affinity to one core, Threads -> audiodg.exe Idle Priority<br>
+Set these threads below to separate cores that aren't being used by other devices and drivers.
+   - In one of the two csrss services, look for a thread with the highest DPC delta upon doing keypresses. In Windows 11 this thread is tied to the keyboard
+   - DWM: CMit, CKst are threads that handle mouse input. Suspend the Windows.Gaming.Input thread
+   - audiodg: audiodg.exe thread that starts when audio is being played then stops right after <br>
 
 credits:
 
