@@ -45,7 +45,7 @@ Use AppxPackagesManager to clean up apps you don't need.
 
 <br>
 
-**Autoruns**: unhide Windows services
+**Autoruns**: unhide Windows services (more can be disabled but these are the ones I find safe to disable, even though my NTLite preset and .bat scripts disable all of the unndeeded ones)
 
    - services: disable AppXSvc, ApxSvc, BITS, Bluetooth related, FontCache, UDK related, WMI, Wpn services
 
@@ -99,7 +99,7 @@ For your storage device under Disk drives, turn off write caching by going into 
    - Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused usb devices, generic pnp monitor)
 Show hidden devices, disable Motherboard resources
 
-A properly broken device manager after Windows and SCEWIN BIOS tweaks should look like this:
+A properly broken device manager after Windows and SCEWIN BIOS tweaks look like this:
 
 <img src="Images/1.jpg" alt="Logo" width="400" height="500"/>
 
@@ -196,6 +196,46 @@ Set these threads below to separate cores that aren't being used by other device
    - In one of the two csrss services, look for a thread with the highest DPC delta upon doing keypresses. In Windows 11 this thread is tied to the keyboard
    - DWM: CMit, CKst are threads that handle mouse input. Suspend the Windows.Gaming.Input thread
    - audiodg: audiodg.exe thread that starts when audio is being played then stops right after <br>
+
+**RWEverything**
+
+Some of these settings might be already set in the BIOS, however I've seen a lot of strange behaviour in Windows regarding clock speeds and power saving features changing without a clear explanation.<br>
+
+   - Disable PCIe power saving features (ASPM) on your device for lower latency. Replace <BAR1> with your own BAR1 from RWEverything and replace the four digits at the end.<br>
+W16 0xB0000004+0x2020 0x0  → W16 0xB0002024 0x0 (this is just an example)<br>
+
+W16 <BAR1>+2020 0x0<br>
+W16 <BAR1>+2040 0x0<br>
+W16 <BAR1>+2060 0x0<br>
+W16 <BAR1>+2080 0x0<br>
+W16 <BAR1>+20A0 0x0<br>
+W16 <BAR1>+20C0 0x0<br>
+W16 <BAR1>+20E0 0x0<br>
+W16 <BAR1>+2100 0x0<br>
+
+   - Disable CPU power management features (SpeedStep, thermal throttling, prefetchers)<br>
+WRMSR 0x1a0 0x00000000 0x00000000<br>
+
+   - Remove CPU package power limits (allows unlimited power draw)<br>
+WRMSR 0x610 0x00000000 0x00FFC000<br>
+
+   - Clear additional power limit registers for CPU cores and iGPU<br>
+WRMSR 0x638 0x00000000 0x00000000<br>
+WRMSR 0x640 0x00000000 0x00000000<br>
+WRMSR 0x618 0x00000000 0x00000000<br>
+
+   - Disable Spectre/Meltdown security mitigations<br>
+WRMSR 0x48 0x00000000 0x00000000<br>
+WRMSR 0x49 0x00000000 0x00000000<br>
+
+   - Disable CPU idle states (C1E)<br>
+WRMSR 0x1FC 0x00000000 0x00000000<br>
+
+   - Set turbo multiplier to a specific value. 32 (hex 50) stands for 5 GHz.<br>
+WRMSR 0x1AD 0x00000000 0x32323232<br>
+
+   - Copy your final settings in one line and separate them with semicolons (;) so they can be applied in one step on every startup.<br>
+Eg. WRMSR 0x610 0x00000000 0x00FFC000; WRMSR 0x638 0x00000000 0x00000000; WRMSR 0x640 0x00000000 0x00000000<br>
 
 credits:
 
