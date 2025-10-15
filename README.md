@@ -201,17 +201,17 @@ Set these threads below to separate cores that aren't being used by other device
 
 Some of these settings might be already set in the BIOS, however I've seen a lot of strange behaviour in Windows regarding clock speeds and power saving features changing without a clear explanation.<br>
 
-   - Disable PCIe power saving features (ASPM) on your device for lower latency. Replace <BAR1> with your own BAR1 from RWEverything and replace the four digits at the end.<br>
+   - Disable PCIe power saving features (ASPM) on your device for lower latency. Replace BAR1 with your own BAR1 from RWEverything and replace the four digits at the end.<br>
 W16 0xB0000004+0x2020 0x0  → W16 0xB0002024 0x0 (this is just an example)<br>
 
-W16 <BAR1>+2020 0x0<br>
-W16 <BAR1>+2040 0x0<br>
-W16 <BAR1>+2060 0x0<br>
-W16 <BAR1>+2080 0x0<br>
-W16 <BAR1>+20A0 0x0<br>
-W16 <BAR1>+20C0 0x0<br>
-W16 <BAR1>+20E0 0x0<br>
-W16 <BAR1>+2100 0x0<br>
+W16 BAR1+2020 0x0<br>
+W16 BAR1+2040 0x0<br>
+W16 BAR1+2060 0x0<br>
+W16 BAR1+2080 0x0<br>
+W16 BAR1+20A0 0x0<br>
+W16 BAR1+20C0 0x0<br>
+W16 BAR1+20E0 0x0<br>
+W16 BAR1+2100 0x0<br>
 
    - Disable CPU power management features (SpeedStep, thermal throttling, prefetchers)<br>
 WRMSR 0x1a0 0x00000000 0x00000000<br>
