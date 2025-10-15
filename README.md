@@ -99,7 +99,7 @@ For your storage device under Disk drives, turn off write caching by going into 
    - Disable unnecessary devices: (System Management BIOS, PCI Express Root Ports, ISA Bridge, PCI standard RAM Controller, generic software components, unused usb devices, generic pnp monitor)
 Show hidden devices, disable Motherboard resources
 
-A properly broken device manager after Windows and SCEWIN BIOS tweaks look like this:
+A properly broken device manager after Windows and hidden BIOS tweaks can look like this:
 
 <img src="Images/1.jpg" alt="Logo" width="400" height="500"/>
 
