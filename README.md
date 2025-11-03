@@ -239,6 +239,8 @@ WRMSR 0x1AD 0x00000000 0x32323232<br>
    - Copy your final settings in one line and separate them with semicolons (;) so they can be applied in one step on every startup.<br>
 Eg. WRMSR 0x610 0x00000000 0x00FFC000; WRMSR 0x638 0x00000000 0x00000000; WRMSR 0x640 0x00000000 0x00000000<br>
 
+More RWE settings: https://github.com/Hyyote/files-/blob/main/RWEverything%20settings/settings.txt
+
 credits:
 
 https://github.com/eskezje lots of undocumented registry values
