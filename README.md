@@ -47,9 +47,9 @@ Use AppxPackagesManager to clean up apps you don't need.
 
 **Autoruns**: unhide Windows services (more can be disabled but these are the ones I find safe to disable, even though my NTLite preset and .bat scripts disable all of the unndeeded ones)
 
-   - services: disable AppXSvc, ApxSvc, BITS, Bluetooth related, FontCache, UDK related, WMI, Wpn services
+   - services: disable Appinfo, ApMgmt, AppReadiness AppXSvc, ApxSvc, BITS, Bluetooth related, CDP services, ClipSVC, CredentialEnrollment services, DeviceFlow services, KeyIso, PlugPlay, sppsvc StorSvc, UDK related, WMI, Wpn services
 
-   - drivers: disable AppleSSD, Bluetooth related, HidBatt, HidBth, Intel Serial IO related, Microsoft_Bluetooth, swenum, WacomPen
+   - drivers: disable amd related (if not needed for AMD), AppleSSD, Bluetooth related, HidBatt, HidBth, i8042prt, Microsoft_Bluetooth, RFCOMM, swenum, WacomPen
 
 <br>
 
@@ -194,8 +194,10 @@ Hidden devices should be checked on every startup.
 
 Set these threads below to separate cores that aren't being used by other devices and drivers.
    - In one of the two csrss services, look for a thread with the highest DPC delta upon doing keypresses. In Windows 11 this thread is tied to the keyboard
-   - DWM: CMit, CKst are threads that handle mouse input. Suspend the Windows.Gaming.Input thread
-   - audiodg: audiodg.exe thread that starts when audio is being played then stops right after <br>
+   - DWM: CMit, CKst are threads that handle mouse input, set them to time critical. Suspend or Terminate the Windows.Gaming.Input thread
+   - audiodg: set the two threads below to idle <br>
+   audiodg.exe!CAudioPump (starts when audio is being played then stops right after) <br>
+   AUDIOKSE.dll
 
 **RWEverything**
 
