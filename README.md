@@ -36,8 +36,7 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11
 
 Recommendations:
    - [BEYOND PERFORMANCE](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyond.pow)
-   - [Lawliet](https://github.com/Hyyote/files-/blob/main/Power%20plans/lawliet.pow)
-   - [Sapphire](https://github.com/Hyyote/files-/blob/main/Power%20plans/sapphire.pow)
+   - [BEYOND for AMD processors that need some auto settings for optimal performance](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyondamd.pow)
 <br>
 
 Use AppxPackagesManager to clean up apps you don't need.
@@ -148,12 +147,6 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "N
 
    - This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
 colorcpl -> All Profiles -> delete everything until the page is blank
-   - Deselect the Rendering Intent setting by adding:<br>
-```cmd
-REG ADD "HKCU\Software\Microsoft\Windows NT\CurrentVersion\ICM\RegisteredProfiles" /v "ri" /t REG_DWORD /d "4" /f
-```
-
-Use the YcbCr 4:2:2 color format in your GPU settings if your eyes are fine with the quality loss.
 
 <br>
 
@@ -189,15 +182,6 @@ It's worth trying to lower the Vertical Total setting in the Manual tab before r
    - You can bulk remove them with: https://www.uwe-sieber.de/files/DeviceCleanup_x64.zip (use at your own risk, since the tool isn't open source)
 
 Hidden devices should be checked on every startup.
-
-**Process Priority**
-
-Set these threads below to separate cores that aren't being used by other devices and drivers.
-   - In one of the two csrss services, look for a thread with the highest DPC delta upon doing keypresses. In Windows 11 this thread is tied to the keyboard
-   - DWM: CMit, CKst are threads that handle mouse input, set them to time critical. Suspend or Terminate the Windows.Gaming.Input thread
-   - audiodg: set the two threads below to idle <br>
-   audiodg.exe!CAudioPump (starts when audio is being played then stops right after) <br>
-   AUDIOKSE.dll
 
 **RWEverything**
 
