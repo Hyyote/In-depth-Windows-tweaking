@@ -1,8 +1,10 @@
 # In-depth-Windows-tweaking
 
-This guide covers tweaks beyond "advanced" PC optimization focusing on Windows settings that are more on the experimental side. Basic BIOS and Windows settings are widely documented, so they’re not included here. Most advanced tweaks are in my `.bat` files:<br>
+This guide covers tweaks beyond "advanced" PC optimization focusing on Windows settings that are more on the experimental side. Basic BIOS and Windows settings are widely documented, so they’re not included here. Most advanced tweaks are in my `.bat` files.<br>
 
-you can search for things you are interested in by searching for keywords like Privacy, Telemetry, CoreParking, Kernel settings, while undefined ones are in Miscellaneous
+You can search for things you are interested in by searching for keywords like Privacy, Telemetry, CoreParking, Kernel settings, while undefined ones are in Miscellaneous.
+
+ <mark>Always use at least 3200 DPI if you can.
 
 &nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/tweaks
 
@@ -52,7 +54,7 @@ Use AppxPackagesManager to clean up apps you don't need.
 
 <br>
 
-**BCDEdits**: (default values recommended for Windows 11)<br>
+**BCDEdits**:<br>
 <br>
 There are ongoing debates about which is the right configuration for each version of Windows, but I got the best results with these commands with HPET disabled in BIOS and Windows.<br>
 <br>
@@ -86,6 +88,7 @@ BCDEDIT /set sos No >NUL 2>&1
 BCDEDIT /set pae ForceDisable >NUL 2>&1
 BCDEDIT /set maxproc No >NUL 2>&1
 BCDEDIT /set restrictapicluster 0 >NUL 2>&1
+BCDEDIT /set pciexpress forcedisable >NUL 2>&1
 BCDEDIT /set xsavedisable Yes >NUL 2>&1
 ```
    - Device Manager:
@@ -126,21 +129,6 @@ GPU<br>
 ## 2.5. Poorly documented tweaks
 
 
-<br>
-
-**Disable Task Manager and Control Panel**
-
-   - Not having something running in the background is always good. Your system could freeze for many possible reasons while you're playing games or doing something important, but realistically you almost never need to use these.
-
-   - I recommend not replacing Task Manager with either ProcessExplorer or SystemInformer (ProcessHacker) because both are sources of input lag. Using them portably is completely fine.
-
-   - These settings can be turned on and off, but you need to restart for the Control Panel to turn back on:
-
-```cmd
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t Reg_DWORD /d "1" /f
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoControlPanel" /t Reg_DWORD /d "1" /f
-```
-<br>
 <br>
 
 **Delete ICC Color Profiles**
