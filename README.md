@@ -5,6 +5,7 @@ This guide covers tweaks beyond "advanced" PC optimization focusing on Windows s
 You can search for things you are interested in by searching for keywords like Privacy, Telemetry, CoreParking, Kernel settings, while undefined ones are in Miscellaneous.
 
  <mark>Always use at least 3200 DPI if you can.
+ <mark>If you used the scripts from the tweaks folder, do not set a new default task manager, it increases latency.
 
 &nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/tweaks
 
