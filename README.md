@@ -94,7 +94,7 @@ BCDEDIT /set xsavedisable Yes >NUL 2>&1
 ```
    - Device Manager:
 View -> Devices by type<br>
-For your storage device under Disk drives, turn off write caching by going into Properties -> Policies<br>
+For your storage device under Disk drives, check Turn off write-cache buffer flushing by going into Properties -> Policies<br>
 
    - Disable power saving on every device with a script or manually, since it takes around one minute to do
      (https://github.com/Hyyote/files-/tree/main/Disable%20power%20saving)
