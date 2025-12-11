@@ -79,10 +79,10 @@ BCDEDIT /set MSI Default >NUL 2>&1
 BCDEDIT /set usephysicaldestination No >NUL 2>&1
 BCDEDIT /set usefirmwarepcisettings No >NUL 2>&1
 BCDEDIT /set tscsyncpolicy Enhanced >NUL 2>&1
-BCDEDIT /set disabledynamictick Yes >NUL 2>&1
-BCDEDIT /set useplatformtick Yes >NUL 2>&1
-BCDEDIT /deletevalue useplatformclock >NUL 2>&1
-BCDEDIT /set useplatformclock False >NUL 2>&1
+BCDEDIT /deletevalue useplatformtick
+BCDEDIT /deletevalue useplatformclock
+BCDEDIT /deletevalue disabledynamictick
+BCDEDIT /set disabledynamictick yes
 BCDEDIT /set uselegacyapicmode No >NUL 2>&1
 BCDEDIT /set sos No >NUL 2>&1
 BCDEDIT /set pae ForceDisable >NUL 2>&1
