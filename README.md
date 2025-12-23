@@ -36,9 +36,9 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11
 
 **Import a power plan**<br>
 
-Recommendations:
-   - [BEYOND PERFORMANCE](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyond.pow)
-   - [BEYOND for AMD processors that need some auto settings for optimal performance](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyondamd.pow)
+Recommendation:
+   - [BEYOND PERFORMANCE](https://github.com/Hyyote/files-/blob/main/Power%20plans/beyond.pow)<br>
+   Does not work well with E-cores apparently, so they have to be disabled or a workaround has to be found.
 <br>
 
 Use AppxPackagesManager to clean up apps you don't need.
