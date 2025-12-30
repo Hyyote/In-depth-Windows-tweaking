@@ -103,7 +103,7 @@ Show hidden devices, disable Motherboard resources
 
 A properly broken device manager after Windows and hidden BIOS tweaks can look like this:
 
-<img src="Images/devmgmt.png" alt="Logo" width="400" height="500"/>
+<img src="Images/devmgmt.png"/>
 
 <br>
 
