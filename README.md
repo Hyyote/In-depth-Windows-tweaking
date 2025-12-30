@@ -103,11 +103,7 @@ Show hidden devices, disable Motherboard resources
 
 A properly broken device manager after Windows and hidden BIOS tweaks can look like this:
 
-<img src="Images/1.jpg" alt="Logo" width="400" height="500"/>
-
-<img src="Images/2.jpg" alt="Logo" width="400" height="500"/>
-
-<img src="Images/3.jpg" alt="Logo" width="400" height="500"/>
+<img src="Images/devmgmt.png" alt="Logo" width="400" height="500"/>
 
 <br>
 
@@ -157,7 +153,7 @@ change Scaling to 2<br>
 As for Custom Resolution Utility, I recommend deleting every value and adding resolutions to the Detailed Resolutions tab, using Exact Reduced timings with the monitor's highest supported refresh rate.
 It's worth trying to lower the Vertical Total setting in the Manual tab before running restart64.exe.
 
-<img src="Images/5.png" alt="Logo" width="650" height="500"/>
+<img src="Images/5.png"/>
 
 <br>
 
