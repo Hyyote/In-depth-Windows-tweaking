@@ -152,9 +152,14 @@ change Scaling to 2<br>
 
    - I recommend removing every GPU scaled resolution using Scaled Resolution Editor from the author of CRU.<br>
    - As for Custom Resolution Utility, every existing value can be deleted and unchecked, then new ones can be added in the Detailed Resolutions tab on top .<br>
-   - Using Manual mode, Horizontal Total should be lowered, while Vertical Total is to be raised. Front porch and Sync width can be lowered without consequences. The aim is also to achieve an exact refresh rate (240.000 Hz instead of 239.980)
+   - Using Manual mode, Horizontal Total should be lowered, while Vertical Total is to be raised. Front porch and Sync width can be lowered without consequences. The aim is also to achieve an exact refresh rate (240.000 Hz instead of 239.980).
+
+<br>The images below show the modifications before and after:
 
 <br>
+
+<img src="Images/CRUdefault.png"/> <br>
+<img src="Images/CRUmod.png"/>
 
 **Device Cleanup**
 
@@ -213,3 +218,5 @@ credits:
 https://github.com/eskezje lots of undocumented registry values
 
 https://twitter.com/BEYONDPERF_LLG process priority settings and removing clock interrupts
+
+Proviise for the CRU settings and general Windows settings
