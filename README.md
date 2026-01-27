@@ -150,10 +150,9 @@ change Scaling to 2<br>
 
 <br>
 
-As for Custom Resolution Utility, I recommend deleting every value and adding resolutions to the Detailed Resolutions tab, using Exact Reduced timings with the monitor's highest supported refresh rate.
-It's worth trying to lower the Vertical Total setting in the Manual tab before running restart64.exe.
-
-<img src="Images/5.png"/>
+   - I recommend removing every GPU scaled resolution using Scaled Resolution Editor from the author of CRU.<br>
+   - As for Custom Resolution Utility, every existing value can be deleted and unchecked, then new ones can be added in the Detailed Resolutions tab on top .<br>
+   - Using Manual mode, Horizontal Total should be lowered, while Vertical Total is to be raised. Front porch and Sync width can be lowered without consequences. The aim is also to achieve an exact refresh rate (240.000 Hz instead of 239.980)
 
 <br>
 
