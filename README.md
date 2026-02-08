@@ -125,15 +125,6 @@ GPU<br>
 ## 2.5. Poorly documented tweaks
 
 
-<br>
-
-**Delete ICC Color Profiles**
-
-   - This can only be done with System Privileges, so it's best to use NSudo or something similar.<br>
-colorcpl -> All Profiles -> delete everything until the page is blank
-
-<br>
-
 **Display scaling and custom resolutions**
 
    - It's generally recommended to use display scaling and native resolutions. This can only be achieved by creating custom resolutions in Custom Resolution Utility. Confirm display scaling being used by checking the active resolution in the monitor's menu.
