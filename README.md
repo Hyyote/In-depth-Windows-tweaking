@@ -60,36 +60,27 @@ There are ongoing debates about which is the right configuration for each versio
 <br>
 *Note: "BCDEDIT /set xsavedisable Yes" disables AVX*
    ```batch
-BCDEDIT /set nx AlwaysOff >NUL 2>&1
-BCDEDIT /set ems No >NUL 2>&1
-BCDEDIT /set bootems No >NUL 2>&1
-BCDEDIT /set integrityservices disable >NUL 2>&1
-BCDEDIT /set tpmbootentropy ForceDisable >NUL 2>&1
-BCDEDIT /set bootmenupolicy Legacy >NUL 2>&1
-BCDEDIT /set debug No >NUL 2>&1
-BCDEDIT /set hypervisorlaunchtype Off >NUL 2>&1
-BCDEDIT /set disableelamdrivers Yes >NUL 2>&1
-BCDEDIT /set isolatedcontext No >NUL 2>&1
-BCDEDIT /set allowedinmemorysettings 0x0 >NUL 2>&1
-BCDEDIT /set vm No >NUL 2>&1
-BCDEDIT /set vsmlaunchtype Off >NUL 2>&1
-BCDEDIT /set x2apicpolicy Enable >NUL 2>&1
-BCDEDIT /set configaccesspolicy Default >NUL 2>&1
-BCDEDIT /set MSI Default >NUL 2>&1
-BCDEDIT /set usephysicaldestination No >NUL 2>&1
-BCDEDIT /set usefirmwarepcisettings No >NUL 2>&1
-BCDEDIT /set tscsyncpolicy Enhanced >NUL 2>&1
-BCDEDIT /deletevalue useplatformtick
-BCDEDIT /deletevalue useplatformclock
-BCDEDIT /deletevalue disabledynamictick
-BCDEDIT /set disabledynamictick yes
-BCDEDIT /set uselegacyapicmode No >NUL 2>&1
-BCDEDIT /set sos No >NUL 2>&1
-BCDEDIT /set pae ForceDisable >NUL 2>&1
-BCDEDIT /set maxproc No >NUL 2>&1
-BCDEDIT /set restrictapicluster 0 >NUL 2>&1
-BCDEDIT /set pciexpress forcedisable >NUL 2>&1
-BCDEDIT /set xsavedisable Yes >NUL 2>&1
+bcdedit /set allowedinmemorysettings 0x0>nul 2>&1
+bcdedit /set linearaddress57 optout>nul 2>&1
+bcdedit /set bootlog no>nul 2>&1
+bcdedit /set bootux disabled>nul 2>&1
+bcdedit /set disabledynamictick yes>nul 2>&1
+bcdedit /set disableelamdrivers yes>nul 2>&1
+bcdedit /set ems no>nul 2>&1
+bcdedit /set event no>nul 2>&1
+bcdedit /set hypervisorlaunchtype off>nul 2>&1
+bcdedit /set isolatedcontext no>nul 2>&1
+bcdedit /set lastknowngood no>nul 2>&1
+bcdedit /set nx alwaysoff>nul 2>&1
+bcdedit /set recoveryenabled no>nul 2>&1
+bcdedit /set sos no>nul 2>&1
+bcdedit /set tpmbootentropy forcedisable>nul 2>&1
+bcdedit /set vm no>nul 2>&1
+bcdedit /set vsmlaunchtype off >nul 2>&1
+bcdedit /set bootmenupolicy legacy
+bcdedit /set disabledynamictick yes
+bcdedit /set useplatformclock no
+bcdedit /set xsavedisable 1
 ```
    - Device Manager:
 View -> Devices by type<br>
