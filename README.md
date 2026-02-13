@@ -157,7 +157,7 @@ Hidden devices should be checked on every startup.
 
 Some of these settings might be already set in the BIOS, however I've seen a lot of strange behaviour in Windows regarding clock speeds and power saving features changing without a clear explanation.<br>
 
-   - Disable PCIe power saving features (ASPM) on your device for lower latency. Replace BAR1 with your own BAR1 from RWEverything and replace the four digits at the end.<br>
+   - Disable xHCI IMOD on your USB controller for lower latency. Replace BAR1 with your own BAR1 from RWEverything and replace the four digits at the end.<br>
 W16 0xB0000004+0x2020 0x0  → W16 0xB0002024 0x0 (this is just an example)<br>
 
 W16 BAR1+2020 0x0<br>
