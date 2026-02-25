@@ -4,11 +4,7 @@ This guide covers tweaks beyond "advanced" PC optimization focusing on Windows s
 
 You can search for things you are interested in by searching for keywords like Privacy, Telemetry, CoreParking, Kernel settings, while undefined ones are in Miscellaneous.
 
- <mark>If you used the scripts from the tweaks folder, do not set a new default task manager, it increases latency.
-
 &nbsp;&nbsp;&nbsp;https://github.com/Hyyote/files-/tree/main/tweaks
-
-> **Note:** If you require components for games like Valorant or FACEIT, or need Windows Update support, this guide is not for you.
 
 ---
 
