@@ -80,7 +80,6 @@ bcdedit /set vsmlaunchtype off >nul 2>&1
 bcdedit /set bootmenupolicy legacy
 bcdedit /set disabledynamictick yes
 bcdedit /set useplatformclock no
-bcdedit /set xsavedisable 1
 ```
    - Device Manager:
 View -> Devices by type<br>
