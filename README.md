@@ -58,7 +58,6 @@ Use AppxPackagesManager to clean up apps you don't need.
 <br>
 There are ongoing debates about which is the right configuration for each version of Windows, but I got the best results with these commands with HPET disabled in BIOS and Windows.<br>
 <br>
-*Note: "BCDEDIT /set xsavedisable Yes" disables AVX*
    ```batch
 bcdedit /set allowedinmemorysettings 0x0>nul 2>&1
 bcdedit /set linearaddress57 optout>nul 2>&1
@@ -103,13 +102,14 @@ A properly broken device manager after Windows and hidden BIOS tweaks can look l
    
 USB host controller<br>
 GPU<br>
+Network Interface Controller (Spread across CPU cores if using ReceiveSideScaling)
 <br>
 
    - Use benchmarks to determine which core gets you the highest performance for the GPU.<br>
    
    - In Device Manager, the PCI to PCI Bridge directly above your GPU entry also has to be bound to the same core.<br> Check its location by right clicking on the device -> Properties -> Location: PCI Bus 1-0-0 for example.
 
-   - Affinities don't do anything for storage controllers
+   - Affinities don't work for storage controllers
 ---
 
 ## 2.5. Poorly documented tweaks
@@ -132,7 +132,7 @@ change Scaling to 2<br>
 <br>
 
    - I recommend removing every GPU scaled resolution using Scaled Resolution Editor from the author of CRU.<br>
-   - As for Custom Resolution Utility, every existing value can be deleted and unchecked, then new ones can be added in the Detailed Resolutions tab on top .<br>
+   - As for Custom Resolution Utility, every existing value can be deleted and unchecked, then new ones can be added in the DisplayID 2.0 Detailed Resolutions tab.<br>
    - Using Manual mode, Horizontal Total should be lowered, while Vertical Total is to be raised. Front porch and Sync width can be lowered without consequences. The aim is also to achieve an exact refresh rate (240.000 Hz instead of 239.980).
 
 <br>The images below show the modifications before and after:
