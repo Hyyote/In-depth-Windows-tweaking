@@ -135,12 +135,11 @@ change Scaling to 2<br>
    - As for Custom Resolution Utility, every existing value can be deleted and unchecked, then new ones can be added in the DisplayID 2.0 Detailed Resolutions tab.<br>
    - Using Manual mode, Horizontal Total should be lowered, while Vertical Total is to be raised. Front porch and Sync width can be lowered without consequences. The aim is also to achieve an exact refresh rate (240.000 Hz instead of 239.980).
 
-<br>The images below show the modifications before and after:
+<br>This is a new method by Proviise and there is a noticeable difference between using this and other CRU methods such as TDT or just simply adding resolutions to the main tab.
 
 <br>
 
-<img src="Images/CRUdefault.png"/> <br>
-<img src="Images/CRUmod.png"/>
+<img src="Images/CRU.png"/> <br>
 
 **Device Cleanup**
 
