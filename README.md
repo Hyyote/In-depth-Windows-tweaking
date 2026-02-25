@@ -195,8 +195,8 @@ More RWE settings: https://github.com/Hyyote/files-/blob/main/RWEverything%20set
 
 credits:
 
+**Proviise** for the CRU settings and general Windows settings
+
 https://github.com/eskezje lots of undocumented registry values
 
 https://twitter.com/BEYONDPERF_LLG process priority settings and removing clock interrupts
-
-Proviise for the CRU settings and general Windows settings
