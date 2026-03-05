@@ -55,6 +55,9 @@ Use AppxPackagesManager to clean up apps you don't need.
 There are ongoing debates about which is the right configuration for each version of Windows, but I got the best results with these commands with HPET disabled in BIOS and Windows.<br>
 <br>
    ```batch
+bcdedit /deletevalue useplatformclock
+bcdedit /set useplatformtick yes
+bcdedit /set disabledynamictick yes
 bcdedit /set allowedinmemorysettings 0x0>nul 2>&1
 bcdedit /set linearaddress57 optout>nul 2>&1
 bcdedit /set bootlog no>nul 2>&1
@@ -73,8 +76,6 @@ bcdedit /set tpmbootentropy forcedisable>nul 2>&1
 bcdedit /set vm no>nul 2>&1
 bcdedit /set vsmlaunchtype off >nul 2>&1
 bcdedit /set bootmenupolicy legacy
-bcdedit /set disabledynamictick yes
-bcdedit /set useplatformclock no
 ```
    - Device Manager:
 View -> Devices by type<br>
