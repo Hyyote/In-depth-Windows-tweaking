@@ -33,7 +33,7 @@ so I recommend one that is pre-tweaked such as my NTLite builds or Tiny11
 **Import a power plan**<br>
 
 Recommendation:
-   - [BEYOND PERFORMANCE power plan modified by me](https://github.com/Hyyote/files-/blob/main/Power%20plans/Hyote.pow)<br>
+   - [my power plan](https://github.com/Hyyote/files-/blob/main/Power%20plans/Frenzy.pow)<br>
    Does not work well with E-cores apparently, so they have to be disabled or a workaround has to be found.
 <br>
 
