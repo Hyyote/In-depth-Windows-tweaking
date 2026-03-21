@@ -109,6 +109,22 @@ Network Interface Controller (Spread across CPU cores if using ReceiveSideScalin
    - Affinities don't work for storage controllers
 ---
 
+**MorePowerTool settings**<br>
+
+<img src="Images/1.FeaturesDefault.jpg" width="500" height="500"/> <img src="Images/1.FeaturesModded.jpg" width="500" height="500"/>
+<br>
+<img src="Images/2.PowerPlayDefault.jpg" width="500" height="500"/> <img src="Images/2.PowerPlayModded.jpg" width="500" height="500"/>
+<br>
+<img src="Images/2.PowerxMod.jpg" width="500" height="500"/>
+<br>
+<img src="Images/3.OCDefault.jpg" width="500" height="500"/> <img src="Images/3.OCModded.jpg" width="500" height="500"/>
+<br>
+<img src="Images/4.FrequencyDefault.jpg" width="500" height="500"/> <img src="Images/4.FrequencyModded.jpg" width="500" height="500"/>
+<br>
+<img src="Images/5.FanDefault.jpg" width="500" height="500"/> <img src="Images/5.FanModded.jpg" width="500" height="500"/>
+<br>
+<img src="Images/6.DebugDefault.jpg" width="500" height="500"/> <img src="Images/6.DebugModded.jpg" width="500" height="500"/>
+
 ## 2.5. Poorly documented tweaks
 
 
@@ -192,7 +208,7 @@ More RWE settings: https://github.com/Hyyote/files-/blob/main/RWEverything%20set
 
 credits:
 
-**Proviise** for the CRU settings and general Windows settings
+**Proviise** for the CRU, MorePowerTool and general Windows settings
 
 https://github.com/eskezje lots of undocumented registry values
 
